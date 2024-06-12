@@ -1,0 +1,13 @@
+def count_ones(n):
+    # Convert the integer to binary and count the occurrences of '1'
+    binary_str = bin(n)[2:]  # Convert to binary string and remove '0b' prefix
+    count = binary_str.count('1')
+    return count
+
+# Sample input
+number = int(input())
+
+# Check if the input is within the valid range
+if 0 <= number <= 15:
+    # Calculate and print the number of '1's in binary form
+    print(count_ones(number))
