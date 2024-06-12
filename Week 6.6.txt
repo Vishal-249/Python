@@ -1,0 +1,11 @@
+
+a=int(input())
+dic={}
+for i in range(a):
+    k=int(input())
+    if k not in dic:
+        dic[k]=1
+    else:
+        dic[k]+=1
+for i in dic:
+    print(f"{i} occurs {dic[i]} times")

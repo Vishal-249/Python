@@ -1,0 +1,13 @@
+import collections as col
+n=int(input())
+k=col.Counter(list(eval(input().replace(" ",","))))
+c=0
+m=int(input())
+while(m):
+    a,b=input().split()
+    a,b=int(a),int(b)
+    if(k[a]!=0):
+        k[a]-=1
+        c+=b
+    m-=1
+print(c)    

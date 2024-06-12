@@ -1,0 +1,13 @@
+a=int(input())
+b=str(a)
+n=len(b)
+p=1
+sum=0
+for i in b:
+      c=int(i)
+      sum+=(c**p)
+      p+=1
+if sum==a:
+      print("Yes")
+else:
+      print("No")

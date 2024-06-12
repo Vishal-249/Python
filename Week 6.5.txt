@@ -1,0 +1,18 @@
+def print_distinct_elements(arr):
+    # Convert the array to a set to remove duplicates
+    distinct_elements = set(arr)
+    
+    # Print the distinct elements separated by space
+    print(*distinct_elements)
+
+
+# Read input length
+n = int(input())
+
+# Read array elements
+arr = []
+for _ in range(n):
+    arr.append(int(input()))
+
+# Call the function to print distinct elements
+print_distinct_elements(arr)

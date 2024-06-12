@@ -1,0 +1,10 @@
+def fibo(n):
+      if n==1:
+           return 0
+      if n==2
+           return 1
+      else:
+           fibo(n-1)+fibo(n-2)
+a=int(input())
+b=fibo(a)
+print(b)

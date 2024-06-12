@@ -1,0 +1,30 @@
+def merge_arrays_without_duplicates(arr1, arr2):
+    # Convert arrays to sets to remove duplicates
+    set1 = set(arr1)
+    set2 = set(arr2)
+    
+    # Merge the sets
+    merged_set = set1.union(set2)
+    
+    # Convert the merged set back to a sorted list
+    merged_list = sorted(list(merged_set))
+    
+    return merged_list
+
+def main():
+    # Input size and elements of array 1
+    N1 = int(input())
+    arr1 = [int(input()) for _ in range(N1)]
+    
+    # Input size and elements of array 2
+    N2 = int(input())
+    arr2 = [int(input()) for _ in range(N2)]
+    
+    # Merge arrays without duplicates
+    merged_array = merge_arrays_without_duplicates(arr1, arr2)
+    
+    # Output the merged array
+    print(" ".join(map(str, merged_array)))
+
+if __name__ == "__main__":
+    main()

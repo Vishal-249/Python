@@ -1,0 +1,19 @@
+
+m=int(input())
+n=int(input())
+l1=[]
+l2=[]
+l=[]
+for i in range(m):
+    temp=[]
+    for i in range(n):
+        temp.append(int(input()))
+    l1.append(temp)
+for i in range(m):
+    temp=[]
+    for i in range(n):
+        temp.append(int(input()))
+    l2.append(temp)
+for i in range(m):
+    l.append(l1[i]+l2[i])
+print(l)

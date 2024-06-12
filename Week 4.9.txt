@@ -1,0 +1,10 @@
+def ser(a):
+      sum=0
+      t=0
+      for i in range(1,a+1):
+                t=t*10+1
+                sum+=t
+      return sum
+a=int(input())
+result=ser(a)
+print(result)

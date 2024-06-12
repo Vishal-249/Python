@@ -1,0 +1,9 @@
+from collections import defaultdict as dd
+d=dd(list)
+try:
+    while True:
+        book,genre=input().split(', ')
+        d[genre].append(book)
+except EOFError:
+    for i in d.keys():
+        print(f"{i}: {', '.join(d[i])}")

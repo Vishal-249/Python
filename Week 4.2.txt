@@ -1,0 +1,7 @@
+a=int(input())
+b=str(a)
+c=set()
+for i in b:
+     c.add(i)
+d=len(c)
+print(d)

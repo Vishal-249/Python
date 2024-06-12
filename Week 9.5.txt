@@ -1,0 +1,26 @@
+def coinChange(n):
+    # Initialize the list to store the minimum coins needed for each amount
+    dp = [float('inf')] * (n + 1)
+    dp[0] = 0  # Base case: 0 coins are needed to make the amount 0
+    
+    # List of available coin denominations
+    coins = [1, 2, 3, 4]
+    
+    # Compute the minimum coins needed for each amount from 1 to the given amount
+    for i in range(1, n + 1):
+        for coin in coins:
+            if i - coin >= 0:
+                dp[i] = min(dp[i], dp[i - coin] + 1)
+    
+    # If dp[amount] is still float('inf'), it means the amount cannot be made with the given coins
+    if dp[n] == float('inf'):
+        return -1  # This is optional based on problem constraints, but indicates no solution.
+    
+    return dp[n]
+
+# Example usage
+try:
+    n= int(input().strip())
+    print(coinChange(n))
+except EOFError:
+    pass

@@ -1,0 +1,25 @@
+def safe_division():
+    try:
+        # Read the first input and convert it to a float
+        num1 = input().strip()
+        num1 = float(num1)
+
+        # Read the second input and convert it to a float
+        num2 = input().strip()
+        num2 = float(num2)
+
+        # Perform the division
+        result = num1 / num2
+
+    except ValueError:
+        # Handle non-numeric input
+        print("Error: Non-numeric input provided.")
+    except ZeroDivisionError:
+        # Handle division by zero
+        print("Error: Cannot divide or modulo by zero.")
+    else:
+        # Print the result if no exception occurred
+        print(result)
+
+# Call the function
+safe_division()

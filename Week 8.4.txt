@@ -1,0 +1,22 @@
+n = int(input())
+s = {}
+for _ in range(n):
+    data = input().split()
+    name = data[0]
+    tm, am, l = map(int, data[1:])  # Updated variable names
+    s[name] = (tm, am, l)
+a = {name: sum(marks) / len(marks) for name, marks in s.items()}
+h = max(a.values())
+hs = sorted([name for name, score in a.items() if score == h])
+m = max([marks[1] for marks in s.values()])
+ass = sorted([name for name, marks in s.items() if marks[1] == m])
+lm = min([marks[2] for marks in s.values()])
+ls = sorted([name for name, marks in s.items() if marks[2] == lm])
+avgs = min(a.values())
+ags = sorted([name for name, score in a.items() if score == avgs])
+print("\n".join([
+    " ".join(hs),
+    " ".join(ass),
+    " ".join(ls),
+    " ".join(ags)
+]))

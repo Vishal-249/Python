@@ -1,0 +1,15 @@
+from collections import namedtuple
+n=int(input())
+if n==0:
+    print("0.00")
+else:
+    col=input().split()
+    Student=namedtuple('Student',col)
+    st=[]
+    for i in range(n):
+        a,b,c,d=input().split()
+        s=Student(a,b,c,d)
+        st.append(s)
+    total=sum(int(i.MARKS) for i in st)
+    avg=total/len(st)
+    print(f"{avg:.2f}")

@@ -1,0 +1,25 @@
+def find_mapping(A, B):
+    # Create a dictionary to store the index of each element in B
+    index_map = {value: index for index, value in enumerate(B)}
+    
+    # Find the mapping from A to B using the dictionary
+    mapping = [index_map[value] for value in A]
+    
+    return mapping
+
+def main():
+    # Input size of the lists
+    n = int(input())
+    
+    # Input elements of lists A and B
+    A = list(map(int, input().split()))
+    B = list(map(int, input().split()))
+    
+    # Find the index mapping from A to B
+    index_mapping = find_mapping(A, B)
+    
+    # Output the index mapping
+    print(" ".join(map(str, index_mapping)))
+
+if __name__ == "__main__":
+    main()

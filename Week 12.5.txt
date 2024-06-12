@@ -1,0 +1,10 @@
+import math
+flag=0
+n=int(input())
+for i in range(n):
+    if n==math.pow(3,i):
+        flag=1
+if flag:
+    print("True")
+else:
+    print("False")

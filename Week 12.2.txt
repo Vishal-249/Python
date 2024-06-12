@@ -1,0 +1,12 @@
+def count(n,arr,k):
+    c=0
+    for i in range(n):
+        for j in range(i):
+            if i!=j and abs(arr[j]-arr[i])==k:
+                c+=1
+    return c
+if __name__=='__main__':
+    n=int(input())
+    arr=list(eval(input().replace(' ',',')))
+    k=int(input())
+    print(count(n,arr,k))

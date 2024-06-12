@@ -1,0 +1,19 @@
+# Input
+arr = list(map(int, input().split()))
+
+# Dictionary to store frequency of numbers
+frequency_dict = {}
+
+# Count frequency of each number
+for num in arr:
+    if num in frequency_dict:
+        frequency_dict[num] += 1
+    else:
+        frequency_dict[num] = 1
+
+# Sort dictionary by keys
+sorted_frequency = sorted(frequency_dict.items())
+
+# Display results
+for key, value in sorted_frequency:
+    print(key, value)

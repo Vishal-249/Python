@@ -1,0 +1,7 @@
+a=int(input())
+b=str(a)
+count={}
+for i in b:
+        count[i]=count.get(i,0)+1
+n=sum(1 for c in count.values() if c==1)
+print(n)

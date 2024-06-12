@@ -1,0 +1,8 @@
+size1, size2 = map(int, input().split())
+arr1 = list(map(int, input().split()))
+arr2 = list(map(int, input().split()))
+set1 = set(arr1)
+set2 = set(arr2)
+non_repeating = set1.symmetric_difference(set2)
+print(*non_repeating)
+print(len(non_repeating))

@@ -1,0 +1,21 @@
+def find_pivot_index(arr):
+    total_sum = sum(arr)
+    left_sum = 0
+    for i in range(len(arr)):
+        right_sum = total_sum - left_sum - arr[i]
+        if left_sum == right_sum:
+            return i
+        left_sum += arr[i]
+    return -1  # If no pivot is found, return -1
+
+def main():
+    n = int(input())
+    arr = []
+    for _ in range(n):
+        arr.append(int(input()))
+
+    pivot_index = find_pivot_index(arr)
+    print(pivot_index)
+
+if __name__ == "__main__":
+    main()

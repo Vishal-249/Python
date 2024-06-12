@@ -1,0 +1,7 @@
+str1=input()
+str2=input()
+index=str1.find(str2)
+if(index!=1):
+     print(index)
+else:
+    print("-1")

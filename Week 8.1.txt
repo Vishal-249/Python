@@ -1,0 +1,11 @@
+test_dict = {}
+n = int(input())
+for _ in range(n):
+    key, *values = input().split()
+    test_dict[key] = list(map(int, values))
+
+sorted_keys = [key for key, _ in sorted(test_dict.items(), key=lambda item: sum(item[1]))]
+result_dict = {key: sum(test_dict[key]) for key in sorted_keys}
+
+for key, value in result_dict.items():
+    print(key, value)

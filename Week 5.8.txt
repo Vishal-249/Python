@@ -1,0 +1,13 @@
+def second_word_in_uppercase(sentence):
+
+    words = sentence.split()
+
+    if len(words) >= 2:
+
+        return words[1].upper()
+    else:
+        return "LESS"
+
+input_sentence = input()
+result = second_word_in_uppercase(input_sentence)
+print(result)
